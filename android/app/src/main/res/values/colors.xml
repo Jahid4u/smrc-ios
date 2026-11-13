@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Matches AppColors.ink (#0A0A0B) used throughout the Flutter app,
+         so the native launch background is identical to the in-app splash. -->
+    <color name="splash_ink">#0A0A0B</color>
+</resources>

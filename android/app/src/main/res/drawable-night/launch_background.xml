@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  What Android shows the INSTANT the app icon is tapped — before the Flutter
+  engine has even started. Full brand design, matching the reference image
+  exactly: ink background + centered phoenix mark/wordmark image (built from
+  the real logo icon) + gold divider line near the bottom. splash_image.png
+  and splash_branding.png are provided in EVERY density bucket (mdpi, hdpi,
+  xhdpi, xxhdpi, xxxhdpi under drawable-*/) so Android always picks the
+  correctly sized, crisp asset for the device — no blur on high-density
+  screens, no upscaling artifacts. The composite's design width is also
+  capped at 260dp during generation, comfortably under the narrowest real
+  phone screens (~320-360dp), so it can never overflow/crop left-right on
+  any device. The in-app SplashScreen widget is just an invisible
+  same-colour logic step, so this native drawable IS the one and only
+  visible splash design.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_ink" />
+    <item>
+        <bitmap android:src="@drawable/splash_image" android:gravity="center" />
+    </item>
+    <item android:bottom="54dp">
+        <bitmap android:src="@drawable/splash_branding" android:gravity="center_horizontal|bottom" />
+    </item>
+</layer-list>

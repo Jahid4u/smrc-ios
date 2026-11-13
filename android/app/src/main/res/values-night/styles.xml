@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LaunchTheme is the theme applied to MainActivity as soon as it is
+         created, i.e. what's on screen while the OS/Flutter engine are still
+         warming up. Its windowBackground below IS the fix for the black
+         screen — the phone paints this immediately instead of a blank
+         window. main.dart hands off to the Flutter splash via
+         FlutterNativeSplash once the first Flutter frame is ready.
+
+         Parent changed from @android:style/Theme.Black.NoTitleBar to
+         Theme.MaterialComponents.NoActionBar — see values/styles.xml for
+         the full explanation (flutter_stripe requirement). -->
+    <style name="LaunchTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+
+    <!-- NormalTheme is applied once Flutter has taken over drawing, so it
+         only needs to match the app's base background — no logo/bitmap
+         needed here. -->
+    <style name="NormalTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/splash_ink</item>
+    </style>
+</resources>
